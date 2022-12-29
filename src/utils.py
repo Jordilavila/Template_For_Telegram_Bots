@@ -36,5 +36,15 @@ def post_bd(file_name:str, data:dict, encoding:str='utf-8') -> bool:
         logging.error('Error while posting data to ' + file_name + '.')
         return False
 
+def getFormatedDT() -> str:
+    """
+    Return the current date and time in the format specified in the .env file.
+    
+    returns:
+        str
+    """
+    from datetime import datetime
+    return datetime.now().strftime(os.getenv('DT_Format'))
+
 if __name__ == '__main__':
     print('This file is not meant to be run directly.')
