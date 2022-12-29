@@ -2,6 +2,15 @@
 
 Template repo for Telegram bots using the library python-telegram-bot.
 
+## 💻 See the code
+
+You can see the code in the `src` folder. The main file is [my_telegram_bot](my_telegram_bot.md). The other files are the handlers and the utils. The structure is the following:  
+
+- Main file: [my_telegram_bot](my_telegram_bot.md)  
+- Command handlers: [command_handlers](command_handlers.md)  
+- Message handlers: [message_handlers](message_handlers.md)  
+- Utils: [utils](utils.md)  
+
 ## 🛠️ How to use
 
 1. Clone this repo or make a fork of it
@@ -21,7 +30,7 @@ The other variables are set by default. You can change them if you want but it's
 ###  Prerelase
 
 The prerelease version is the version that is in development. It's not recommended to use it in production.
-The prereleases are automated with GitHub Actions. The prerelease version is the version of the main branch.
+The prereleases are automated with the GitHub Action [auto-prerelease.yml](https://github.com/Jordilavila/Template_For_Telegram_Bots/blob/main/.github/workflows/auto-prerelease.yml). The prerelease version is the version of the main branch.
 
 ### Release
 
@@ -30,12 +39,12 @@ The releases are automated with GitHub Actions. The release version is the versi
 
 ### Notify on Telegram when a new release is available
 
-You can use your bot to notify when a new release is available of your code or any other project. You can do it with the GitHub Action [auto-release.yml](.github/workflows/auto-release.yml). Simply add the following secrets to your repo:
+You can use your bot to notify when a new release is available of your code or any other project. You can do it with the GitHub Action [auto-release.yml](https://github.com/Jordilavila/Template_For_Telegram_Bots/blob/main/.github/workflows/auto-release.yml). Simply add the following secrets to your repo:
 
 - TELEGRAM_TO: The chat id of the user or group where you want to send the notification.
 - TELEGRAM_TOKEN: The token of your bot.
 
-And then, uncomment the following lines in the file [auto-release.yml](.github/workflows/auto-release.yml):
+And then, uncomment the following lines in the file [auto-release.yml](https://github.com/Jordilavila/Template_For_Telegram_Bots/blob/main/.github/workflows/auto-release.yml):
 
 ```yaml
 notify_on_telegram:
@@ -62,7 +71,7 @@ And that's all. Now, when you create a new release, the bot will notify you.
 
 ### Auto documentation
 
-You can use the GitHub Action [deploy-docs](.github/workflows/deploy-docs.yml) to automatically generate the documentation of your code and publish it in GitHub Pages. You need the `mkdocs.yml` file and the file `mkdocs-requirements.txt` in the root of your repo. You can see both examples in this repo.
+You can use the GitHub Action [deploy-docs](https://github.com/Jordilavila/Template_For_Telegram_Bots/blob/main/.github/workflows/deploy-docs.yml) to automatically generate the documentation of your code and publish it in GitHub Pages. You need the `mkdocs.yml` file and the file `mkdocs-requirements.txt` in the root of your repo. You can see both examples in this repo.
 
 The theme of the documentation is [mkdocs-material](https://squidfunk.github.io/mkdocs-material/). You can change it if you want.
 

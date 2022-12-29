@@ -1,0 +1,44 @@
+# Simple workflow for deploying static content to GitHub Pages
+name: Crear y publicar documentación
+
+on:
+  # Runs on pushes targeting the default branch
+  #push:
+  #  branches: ["main"]
+
+  # Runs when a release is published
+  release:
+    types: [published]
+  
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  # Single deploy job since we're just deploying
+  create-docs:
+    environment: Deploy docs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r mkdocs-requirements.txt
+      - name: Build docs
+        run: mkdocs build
+      - name: Setup Pages
+        uses: actions/configure-pages@v2
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: './site'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
