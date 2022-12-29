@@ -5,10 +5,12 @@ on:
   # Runs on pushes targeting the default branch
   #push:
   #  branches: ["main"]
-
-  # Runs when a release is published
-  release:
-    types: [published, released, created]
+  
+  # Runs when the workflow auto-release.yml has completed
+  workflow_run:
+    workflows: ["auto-release"]
+    types:
+      - completed
   
 permissions:
   contents: read
