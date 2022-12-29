@@ -2,7 +2,9 @@
 
 Template repo for Telegram bots using the library python-telegram-bot.
 
-[![Deploy docs](https://github.com/Jordilavila/Template_For_Telegram_Bots/actions/workflows/deploy-docs.yml/badge.svg?branch=main)](https://github.com/Jordilavila/Template_For_Telegram_Bots/actions/workflows/deploy-docs.yml)
+[![Deploy Docs](https://github.com/Jordilavila/Template_For_Telegram_Bots/actions/workflows/deploy-docs.yml/badge.svg?branch=main)](https://github.com/Jordilavila/Template_For_Telegram_Bots/actions/workflows/deploy-docs.yml)
+
+🔗 Link to documentation [just here](https://jordilavila.github.io/Template_For_Telegram_Bots/)!
 
 ## 🛠️ How to use
 
