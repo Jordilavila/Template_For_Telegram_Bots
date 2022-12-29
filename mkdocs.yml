@@ -19,9 +19,9 @@ plugins:
       handlers:
         python:
           options:
-            show_source: false
+            show_source: true
             show_root_heading: true
-            heading_level: 3
+            heading_level: 2
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -39,8 +39,10 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Code:
-    - Utils: src/utils.md
-    - Producto: src/producto/producto.md
+    - Main file: my_telegram_bot.md
+    - Command Handlers: command_handlers.md
+    - Message Handlers: message_handlers.md
+    - Utils: utils.md
 
 extra: 
   generator: false
