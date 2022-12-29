@@ -3,6 +3,26 @@ This file contains utility functions for the bot.
 """
 import logging, json, os
 
+def build_menu(buttons: list, n_cols: int, header_buttons: list=None, footer_buttons: list=None) -> list:
+    """
+    Build a menu with buttons.
+    
+    args:
+        buttons: list of list of InlineKeyboardButton
+        n_cols: int
+        header_buttons: list of InlineKeyboardButton
+        footer_buttons: list of InlineKeyboardButton
+
+    returns:
+        list of list of InlineKeyboardButton
+    """
+    menu = [buttons[i:i + n_cols] for i in range(0, len(buttons), n_cols)]
+    if header_buttons:
+        menu.insert(0, [header_buttons])
+    if footer_buttons:
+        menu.append([footer_buttons])
+    return menu
+
 def get_bd(file_name:str, encoding:str='utf-8') -> dict:
     """
     Get the content of a json file.
