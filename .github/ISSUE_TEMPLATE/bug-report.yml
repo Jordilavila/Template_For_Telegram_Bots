@@ -1,5 +1,5 @@
 name: Bug Report
-description: Create a report to help us improve
+description: Create a report to help me improve
 title: "[BUG]"
 labels: ["bug :bug:"]
 
@@ -11,7 +11,7 @@ body:
 
         Use this template to notify me if you found a bug.
 
-        To make it easier for us to help you please enter detailed information below.
+        To make it easier for me to help you please enter detailed information below.
 
   - type: textarea
     id: steps-to-reproduce
@@ -28,7 +28,7 @@ body:
     id: expected-behaviour
     attributes:
       label: Expected behaviour
-      description: Tell us what should happen
+      description: Tell me what should happen
     validations:
       required: true
       
@@ -36,7 +36,7 @@ body:
     id: actual-behaviour
     attributes:
       label: Actual behaviour
-      description: Tell us what happens instead
+      description: Tell me what happens instead
     validations:
       required: true
       
