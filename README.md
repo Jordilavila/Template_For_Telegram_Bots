@@ -66,8 +66,6 @@ You can use the GitHub Action [deploy-docs](.github/workflows/deploy-docs.yml) t
 
 The theme of the documentation is [mkdocs-material](https://squidfunk.github.io/mkdocs-material/). You can change it if you want.
 
-
-
 ## 📚 Dependencies
 
 - [python-telegram-bot](https://github.com/python-telegram-bot/python-telegram-bot)
