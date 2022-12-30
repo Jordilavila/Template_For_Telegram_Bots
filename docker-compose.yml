@@ -1,0 +1,19 @@
+# docker-compose -f docker-compose.yml up
+version: '3'
+services:
+  telegram_bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: "TelegramBot"
+    command: python3 my_telegram_bot.py
+    working_dir: /app
+    volumes:
+      - .:/app
+    environment:
+      - TELEGRAM_BOT_TOKEN=
+      - Log_Folder=/logs
+      - Log_File=telegram_bot.log
+      - DB_Folder=/database
+      - DB_File=telegram_bot.json
+      - DT_Format='%Y-%m-%d %H:%M:%S'
