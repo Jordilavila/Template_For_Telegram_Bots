@@ -6,7 +6,7 @@ Template repo for Telegram bots using the library python-telegram-bot.
 
 🔗 Link to documentation [just here](https://jordilavila.github.io/Template_For_Telegram_Bots/)!
 
-## 🛠️ How to use
+## 🛠️ How to use (in local)
 
 1. Clone this repo or make a fork of it
 2. Install the dependencies with `pip install -r requirements.txt`
@@ -14,9 +14,19 @@ Template repo for Telegram bots using the library python-telegram-bot.
 4. Create an enviroment file with `cp .env.example .env` and fill the token
 5. Run the bot with `python3 my_telegram_bot.py`
 
+## 🐋 How to use (with Docker)
+
+Follow the steps below to use the bot in Docker:
+
+1. Clone this repo or make a fork of it
+2. Create a new bot with the BotFather and get the token
+3. Create an enviroment file with `cp .env.example .env` and fill the token
+4. Fill the `docker-compose.yml` file with the token
+5. Run the bot with `docker-compose up -d`
+
 ### 📝 Environment variables
 
-The environment variables are stored in the `.env` file. The following variables are required:
+The environment variables are stored in the `.env` file or in the `docker-compose.yml` file. The following variables are required:
 
 - TELEGRAM_BOT_TOKEN: The token
 
