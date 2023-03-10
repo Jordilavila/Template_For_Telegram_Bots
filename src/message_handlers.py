@@ -58,8 +58,8 @@ def chats_list_by_name() -> list:
     returns:
         list of str
     """
-    groups = get_bd('chats.json')
-    return [group['name'] for group in groups]
+    groups = get_bd('chats.json')['chats']
+    return [group['title'] for group in groups]
 
 def chats_post_new(group:dict) -> bool:
     """

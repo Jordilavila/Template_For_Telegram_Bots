@@ -17,7 +17,7 @@ jq = updater.job_queue
 dp.add_handler(CommandHandler('start', start))
 
 ### Message Handlers ###
-dp.add_handler(MessageHandler(Filters.text, save_the_chat_when_bot_joins))
+dp.add_handler(MessageHandler(Filters.status_update.new_chat_members, save_the_chat_when_bot_joins))
 
 ### Job Queue ###
 
@@ -27,7 +27,10 @@ dp.add_handler(MessageHandler(Filters.text, save_the_chat_when_bot_joins))
 
 if __name__ == '__main__':
     ## Clean past logs:
-    open(os.getenv('Log_Folder') + os.getenv('Log_File'), 'w').close()
+    if os.path.exists(os.getenv('Log_Folder') + os.getenv('Log_File')):
+        open(os.getenv('Log_Folder') + os.getenv('Log_File'), 'w').close()
+    else:
+        os.makedirs(os.getenv('Log_Folder'), exist_ok=True)
 
     ## Set up logging:
     logging.basicConfig(datefmt=os.getenv('DT_Format'),
